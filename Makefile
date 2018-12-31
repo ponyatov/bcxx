@@ -10,6 +10,8 @@ FORTH.log: FORTH.src ./compiler$(EXE)
 C = bcx.c compiler.cpp compiler.parser.cpp compiler.lexer.cpp 
 H = bcx.h compiler.hpp compiler.parser.hpp
 
+CXXFLAGS += -std=gnu++11
+
 ./compiler$(EXE): $(C) $(H)
 	$(CXX) $(CXXFLAGS) -o $@ $(C)
 	

@@ -13,6 +13,22 @@
 
 #include "bcx.h"
 
+/// @defgroup stab symbol table
+/// @ingroup compiler
+/// @{
+
+/// @brief known labels
+extern std::map<std::string,CELL> label;
+/// @brief forward references
+extern std::map<std::string,std::vector<CELL>> forward;
+
+/// @brief compile label
+extern void Lcompile(std::string *name);
+/// @brief define label
+extern void Ldefine(std::string *name);
+
+/// @}
+
 /// @defgroup parser lexer/parser interface
 /// @{
 

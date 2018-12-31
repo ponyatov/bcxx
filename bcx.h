@@ -69,10 +69,25 @@ extern void NOP(void);
 /// `BYE ( -- )` stop user session
 extern void BYE(void);
 
+/// `JMP ( -- )` unconditional jump
+extern void JMP(void);
+
 /// @}
 
 /// @defgroup mem Memory access
 /// @{
+
+/// @brief `B! ( addr byte -- )` store byte to memory
+extern void Bstore(WORD addr, BYTE byte);
+/// @brief `W! ( addr word -- )` store 16-bit word to memory
+extern void Wstore(WORD addr, WORD word);
+/// @brief `! ( addr cell -- )` store 32-bit cell to memory
+extern void  store(WORD addr, CELL cell);
+
+/// @brief `B@ ( addr -- byte )` fetch byte
+extern BYTE Bfetch(WORD addr);
+/// @brief `W@ ( addr -- word )` fetch 16-bit word
+extern WORD Wfetch(WORD addr);
 
 /// @}
 
