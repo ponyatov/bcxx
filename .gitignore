@@ -1,7 +1,11 @@
 *~
 *.swp
 *.log
+
 *.exe
+compiler
+bcx
+
 *.o
 *.hex
 
