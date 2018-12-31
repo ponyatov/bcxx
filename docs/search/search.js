@@ -7,18 +7,22 @@
 
 var indexSectionsWithContent =
 {
-  0: "bce",
+  0: "bcdeilmnotvy",
   1: "bc",
-  2: "be",
-  3: "b"
+  2: "bdnvy",
+  3: "cimoty",
+  4: "bcdelv",
+  5: "b"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "files",
-  2: "groups",
-  3: "pages"
+  2: "functions",
+  3: "variables",
+  4: "groups",
+  5: "pages"
 };
 
 function convertToId(search)

@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,12 +80,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">bcx.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>embedded runtime (portable part)  
+<p>embedded runtime (portable core) ANSI C'89 code  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="bcx_8h_source.html">bcx.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -92,14 +96,57 @@ Include dependency graph for bcx.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="bcx_8c__incl.png" border="0" usemap="#bcx_8c" alt=""/></div>
 <map name="bcx_8c" id="bcx_8c">
-<area shape="rect" id="node2" href="bcx_8h.html" title="embedded runtime (portable part) " alt="" coords="5,80,60,107"/></map>
+<area shape="rect" id="node2" href="bcx_8h.html" title="embedded runtime (portable core) headers " alt="" coords="143,80,197,107"/></map>
 </div>
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>embedded runtime (portable part) </p>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf1b08ad693e4a9383e53d2658ab41c8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__debug.html#gaf1b08ad693e4a9383e53d2658ab41c8d">DUMP</a> (void)</td></tr>
+<tr class="memdesc:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>DUMP ( -- )</code> dump main memory <br /></td></tr>
+<tr class="separator:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d9f3446653e398af0583979cee23c70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9d9f3446653e398af0583979cee23c70"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__code.html#ga9d9f3446653e398af0583979cee23c70">NOP</a> (void)</td></tr>
+<tr class="memdesc:ga9d9f3446653e398af0583979cee23c70"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>NOP ( -- )</code> do nothing <br /></td></tr>
+<tr class="separator:ga9d9f3446653e398af0583979cee23c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7e9d7bd118297b9ec7cbbe003d3a7f80"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__code.html#ga7e9d7bd118297b9ec7cbbe003d3a7f80">BYE</a> (void)</td></tr>
+<tr class="memdesc:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>BYE ( -- )</code> stop user session <br /></td></tr>
+<tr class="separator:ga7e9d7bd118297b9ec7cbbe003d3a7f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7077f289e1c149d763b086957b1997f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa7077f289e1c149d763b086957b1997f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#gaa7077f289e1c149d763b086957b1997f">VM</a> (void)</td></tr>
+<tr class="memdesc:gaa7077f289e1c149d763b086957b1997f"><td class="mdescLeft">&#160;</td><td class="mdescRight">bytecode interpreter <br /></td></tr>
+<tr class="separator:gaa7077f289e1c149d763b086957b1997f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga35ed50ac3752b2e210a1a720e8417929"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga35ed50ac3752b2e210a1a720e8417929"></a>
+CELL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga35ed50ac3752b2e210a1a720e8417929">M</a> [Msz]</td></tr>
+<tr class="memdesc:ga35ed50ac3752b2e210a1a720e8417929"><td class="mdescLeft">&#160;</td><td class="mdescRight">main memory <br /></td></tr>
+<tr class="separator:ga35ed50ac3752b2e210a1a720e8417929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga970d5b1b5fb047a3d6cd704aed9ddba4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga970d5b1b5fb047a3d6cd704aed9ddba4"></a>
+CELL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga970d5b1b5fb047a3d6cd704aed9ddba4">Ip</a> =0</td></tr>
+<tr class="memdesc:ga970d5b1b5fb047a3d6cd704aed9ddba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">instruction pointer <br /></td></tr>
+<tr class="separator:ga970d5b1b5fb047a3d6cd704aed9ddba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e209c80c1bce17a51f65a83248da385"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9e209c80c1bce17a51f65a83248da385"></a>
+CELL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga9e209c80c1bce17a51f65a83248da385">Cp</a> =0</td></tr>
+<tr class="memdesc:ga9e209c80c1bce17a51f65a83248da385"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler pointer <br /></td></tr>
+<tr class="separator:ga9e209c80c1bce17a51f65a83248da385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b36472a0720086e00a542efeb6f5f7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga7b36472a0720086e00a542efeb6f5f7a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__debug.html#ga7b36472a0720086e00a542efeb6f5f7a">trace</a> =true</td></tr>
+<tr class="memdesc:ga7b36472a0720086e00a542efeb6f5f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">trace flag: print execution log <br /></td></tr>
+<tr class="separator:ga7b36472a0720086e00a542efeb6f5f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fe410a28ee11b520d9dd574d2139f4b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga3fe410a28ee11b520d9dd574d2139f4b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga3fe410a28ee11b520d9dd574d2139f4b">op</a></td></tr>
+<tr class="memdesc:ga3fe410a28ee11b520d9dd574d2139f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">current command opcode <br /></td></tr>
+<tr class="separator:ga3fe410a28ee11b520d9dd574d2139f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>embedded runtime (portable core) ANSI C'89 code </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 31 2018 11:47:15 for BCX: bytecode/FORTH runtime by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 31 2018 14:24:54 for BCX: bytecode/FORTH runtime by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

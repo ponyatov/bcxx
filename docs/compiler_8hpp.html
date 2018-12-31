@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -68,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,21 +80,70 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">compiler.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>bytecode compiler  
+<p>bytecode compiler headers  
 <a href="#details">More...</a></p>
-
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &quot;<a class="el" href="bcx_8h_source.html">bcx.h</a>&quot;</code><br />
+<code>#include &quot;compiler.parser.hpp&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for compiler.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="compiler_8hpp__incl.png" border="0" usemap="#compiler_8hpp" alt=""/></div>
+<map name="compiler_8hpp" id="compiler_8hpp">
+<area shape="rect" id="node5" href="bcx_8h.html" title="embedded runtime (portable core) headers " alt="" coords="255,80,310,107"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="compiler_8hpp__dep__incl.png" border="0" usemap="#compiler_8hppdep" alt=""/></div>
+<map name="compiler_8hppdep" id="compiler_8hppdep">
+<area shape="rect" id="node2" href="compiler_8cpp.html" title="bytecode compiler C++ code " alt="" coords="5,80,101,107"/></map>
+</div>
+</div>
 <p><a href="compiler_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaa40b27ae32d6d1ae7160bd6256e08eb8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#gaa40b27ae32d6d1ae7160bd6256e08eb8">yylex</a> ()</td></tr>
+<tr class="memdesc:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">fetch next token from lexer <br /></td></tr>
+<tr class="separator:gaa40b27ae32d6d1ae7160bd6256e08eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacd8617a8f2ac0de8bc1cc032cf449e19"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#gacd8617a8f2ac0de8bc1cc032cf449e19">yyparse</a> ()</td></tr>
+<tr class="memdesc:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">run parser <br /></td></tr>
+<tr class="separator:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0adcb0ed6472b554f79fcec610f1d081"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0adcb0ed6472b554f79fcec610f1d081"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga0adcb0ed6472b554f79fcec610f1d081">yyerror</a> (std::string msg)</td></tr>
+<tr class="memdesc:ga0adcb0ed6472b554f79fcec610f1d081"><td class="mdescLeft">&#160;</td><td class="mdescRight">error callback <br /></td></tr>
+<tr class="separator:ga0adcb0ed6472b554f79fcec610f1d081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga5e36364965360da7b7cdfc2188e0af84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga5e36364965360da7b7cdfc2188e0af84"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga5e36364965360da7b7cdfc2188e0af84">yylineno</a></td></tr>
+<tr class="memdesc:ga5e36364965360da7b7cdfc2188e0af84"><td class="mdescLeft">&#160;</td><td class="mdescRight">current line in source file <br /></td></tr>
+<tr class="separator:ga5e36364965360da7b7cdfc2188e0af84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9264b77d56b6971f29739e2bda77f51"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gad9264b77d56b6971f29739e2bda77f51"></a>
+char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#gad9264b77d56b6971f29739e2bda77f51">yytext</a></td></tr>
+<tr class="memdesc:gad9264b77d56b6971f29739e2bda77f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">last matched string in lexer <br /></td></tr>
+<tr class="separator:gad9264b77d56b6971f29739e2bda77f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>bytecode compiler </p>
+<div class="textblock"><p>bytecode compiler headers </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 31 2018 11:47:15 for BCX: bytecode/FORTH runtime by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 31 2018 14:24:54 for BCX: bytecode/FORTH runtime by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

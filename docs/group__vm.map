@@ -1,0 +1,7 @@
+<map id="Virtual Machine" name="Virtual Machine">
+<area shape="rect" id="node1" href="$group__bcx.html" title="embedded runtime (portable\l part)" alt="" coords="5,74,188,115"/>
+<area shape="rect" id="node2" href="$group__code.html" title="Core commands" alt="" coords="404,5,523,32"/>
+<area shape="rect" id="node3" href="$group__op.html" title="Command opcodes" alt="" coords="396,56,531,83"/>
+<area shape="rect" id="node4" href="$group__config.html" title="Configuration" alt="" coords="414,107,513,133"/>
+<area shape="rect" id="node5" href="$group__debug.html" title="Debug interface" alt="" coords="406,157,521,184"/>
+</map>

@@ -1,3 +1,5 @@
 <map id="bcx.h" name="bcx.h">
-<area shape="rect" id="node2" href="$bcx_8c.html" title="embedded runtime (portable part) " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node2" href="$bcx_8c.html" title="embedded runtime (portable core) ANSI C&#39;89 code " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$compiler_8hpp.html" title="bytecode compiler headers " alt="" coords="85,80,181,107"/>
+<area shape="rect" id="node4" href="$compiler_8cpp.html" title="bytecode compiler C++ code " alt="" coords="85,155,181,181"/>
 </map>
