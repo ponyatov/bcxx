@@ -1,7 +1,8 @@
 /// @file
-/// @brief embedded runtime (portable part)
+/// @brief embedded runtime (portable core) headers
 
 /// @defgroup bcx embedded runtime (portable part)
+/// @{
 
 #ifndef _H_BCX
 #define _H_BCX
@@ -13,6 +14,10 @@
 
 /// @defgroup vm Virtual Machine
 /// @{
+						/// @brief bytecode interpreter
+extern void VM(void);
+						/// @brief current command opcode
+extern uint8_t op;
 
 /// @defgroup config Configuration
 /// @{
@@ -25,26 +30,46 @@
 
 /// @}
 
-extern CELL M[Msz];		/// main memory
-extern CELL Ip;			/// instruction pointer
-extern CELL Cp;			/// compiler pointer
+						/// @brief main memory
+extern CELL M[Msz];
+						/// @brief instruction pointer
+extern CELL Ip;
+						/// @brief compiler pointer
+extern CELL Cp;
 
-/// @}
-
-/// @defgroup op Opcodes
+/// @defgroup op Command opcodes
 /// @{
 
+						/// @ref NOP
 #define op_NOP	0x00
+						/// @ref BYE
 #define op_BYE	0xFF
 
 /// @}
 
-extern void BYE(void);		/// `BYE ( -- )` stop system
-
-/// @defgroup debug Debug
+/// @defgroup code Core commands
 /// @{
 
-extern void DUMP(void);		/// dump main memory
+/// `NOP ( -- )` do nothing
+extern void NOP(void);
+
+/// `BYE ( -- )` stop user session
+extern void BYE(void);
+
+/// @}
+
+/// @defgroup debug Debug interface
+/// @{
+
+/// `DUMP ( -- )` dump main memory
+extern void DUMP(void);
+
+/// trace flag: print execution log
+extern bool trace;
+
+/// @}
+
+/// @}
 
 /// @}
 

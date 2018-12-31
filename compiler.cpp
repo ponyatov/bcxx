@@ -1,3 +1,6 @@
+/// @file
+/// @brief bytecode compiler C++ code
+
 #include "compiler.hpp"
 
 #define YYERR "\n\n" << yylineno << ":" << msg << "[" << yytext << "]\t\n"
