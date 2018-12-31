@@ -6,6 +6,8 @@
 
 github: https://github.com/ponyatov/bcx
 
+manual: https://ponyatov.github.io/bcx
+
 ## About
 
 This is bytecode interpreter runtime targeted for really tiny embedded systems
