@@ -5,3 +5,4 @@
 *.o
 *.hex
 
+doxygen_sqlite3.db
