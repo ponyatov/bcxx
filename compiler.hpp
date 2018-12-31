@@ -9,9 +9,8 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include <cstdlib>
-#include <cassert>
 
+#include "bcx.h"
 									// lexer/parser interface
 extern int yylex();
 extern int yylineno;

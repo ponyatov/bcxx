@@ -2,10 +2,12 @@
 #include "compiler.hpp"
 %}
 
-%defines %union { char*s; }
+%defines %union { uint8_t op; }
 
 %token pEND
+%token <op> CMD0
 
 %%
 REPL :
-REPL : REPL pEND	{ exit(0); }
+REPL : REPL pEND	{ DUMP(); BYE(); }
+REPL : REPL CMD0	{ M[Cp++] = $2; }

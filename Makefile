@@ -7,8 +7,8 @@ endif
 FORTH.log: FORTH.src ./compiler$(EXE)
 	./compiler$(EXE) < $< > $@ && tail $(TAIL) $@
 
-C = compiler.cpp compiler.parser.cpp compiler.lexer.cpp
-H = compiler.hpp compiler.parser.hpp
+C = bcx.c compiler.cpp compiler.parser.cpp compiler.lexer.cpp 
+H = bcx.h compiler.hpp compiler.parser.hpp
 
 ./compiler$(EXE): $(C) $(H)
 	$(CXX) $(CXXFLAGS) -o $@ $(C)
