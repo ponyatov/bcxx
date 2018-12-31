@@ -1,7 +1,11 @@
 \ FORTH system source code for bcx bytecode compiler/runtime
 
-nop
-bye
+				jmp	0x12345678 \ INTERPRET
+		
+\ :INTERPRET:
+				nop
+				bye
 
+.dump
 .vm
 .end

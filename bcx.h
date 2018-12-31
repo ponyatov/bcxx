@@ -22,7 +22,9 @@ extern uint8_t op;
 /// @defgroup config Configuration
 /// @{
 
-#define CELL uint16_t
+#define BYTE uint8_t
+#define WORD uint16_t
+#define CELL uint32_t
 
 #define Msz	0x1000
 #define Rsz 0x100
@@ -31,7 +33,7 @@ extern uint8_t op;
 /// @}
 
 						/// @brief main memory
-extern CELL M[Msz];
+extern BYTE M[Msz];
 						/// @brief instruction pointer
 extern CELL Ip;
 						/// @brief compiler pointer
@@ -45,6 +47,17 @@ extern CELL Cp;
 						/// @ref BYE
 #define op_BYE	0xFF
 
+						/// @ref JMP
+#define op_JMP	0x01
+						/// @ref qJMP
+#define op_qJMP	0x02
+						/// @ref CALL
+#define op_CALL	0x03
+						/// @ref RET
+#define op_RET	0x04
+						/// @ref LIT
+#define op_LIT	0x05
+
 /// @}
 
 /// @defgroup code Core commands
@@ -55,6 +68,20 @@ extern void NOP(void);
 
 /// `BYE ( -- )` stop user session
 extern void BYE(void);
+
+/// @}
+
+/// @defgroup mem Memory access
+/// @{
+
+/// @}
+
+/// @defgroup compiler Compiler
+/// @{
+
+extern void Bcompile(BYTE byte);
+extern void Wcompile(WORD word);
+extern void  compile(CELL cell);
 
 /// @}
 
