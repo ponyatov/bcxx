@@ -1,6 +1,11 @@
 \ FORTH system source code for bcx bytecode compiler/runtime
 
-				jmp	INTERPRET
+				db 0x01				\ jmp
+_entry:			dw INTERPRET
+_latest:		dw 0x1234			\ last defined word or 0 if no vocabulary
+_heap:			dw 0x5678			\ compiler pointer setup
+
+.dump
 
 INTERPRET:
 				nop

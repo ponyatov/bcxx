@@ -18,6 +18,10 @@ jmp					{ yylval.op = op_JMP; return CMD1; }
 .end				{ return pEND; }
 .dump				{ return pDUMP; }
 
+db					{ return DB; }
+dw					{ return DW; }
+dd					{ return DD; }
+
 \:					{ return COLON; }
 [a-zA-Z0-9_]+		{ yylval.s = new std::string(yytext); return SYM; }
 

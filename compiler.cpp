@@ -19,7 +19,7 @@ void Lcompile(std::string *name) {
 		if (forward.find(*name) == forward.end())	// if not in forward[]
 			forward[*name] = std::vector<CELL>();	// create empty vector
 		forward[*name].push_back(Cp);				// register current Cp
-		Wcompile(0x1234);							// compile dummy address
+		Wcompile(-1);								// compile dummy address
 	}
 }
 
