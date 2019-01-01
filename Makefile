@@ -4,15 +4,15 @@ else
 	EXE =
 endif
 
-FORTH.log: FORTH.src ./compiler$(EXE)
-	./compiler$(EXE) < $< > $@ && tail $(TAIL) $@
+FORTH.log: FORTH.src ./bcx$(EXE)
+	./bcx$(EXE) < $< > $@ && tail $(TAIL) $@
 
 C = bcx.c compiler.cpp compiler.parser.cpp compiler.lexer.cpp 
 H = bcx.h compiler.hpp compiler.parser.hpp
 
 CXXFLAGS += -std=gnu++11
 
-./compiler$(EXE): $(C) $(H)
+./bcx$(EXE): $(C) $(H)
 	$(CXX) $(CXXFLAGS) -o $@ $(C)
 	
 compiler.lexer.cpp: compiler.lex
