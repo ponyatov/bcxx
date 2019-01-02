@@ -8,8 +8,10 @@ _heap:			dw 0x5678			\ compiler pointer setup
 .dump
 
 INTERPRET:
-				nop
-				bye
+				begin
+					nop
+					bye
+				again
 
 .dump
 .vm

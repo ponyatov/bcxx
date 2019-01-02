@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <stack>
 
 #include "bcx.h"
 
@@ -29,9 +30,22 @@ extern void Ldefine(std::string *name);
 
 /// @}
 
-/// @defgroup parser lexer/parser interface
+/// @defgroup cstack control structure compiler stack
 /// @{
 
+/// @brief control structure compiler stack
+extern std::stack<WORD> Cstack;
+
+/// @brief push compiler position
+extern void Cpush(WORD ptr);
+
+/// @brief pop position
+extern WORD Cpop(void);
+
+/// @}
+
+/// @defgroup parser lexer/parser interface
+/// @{
 										/// fetch next token from lexer
 extern int yylex();
 										/// current line in source file

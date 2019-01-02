@@ -12,9 +12,10 @@ CELL Cp	=0;
 bool trace	=true;
 
 void DUMP(void) {
-	fprintf(stderr,"\n\n");
+	fprintf(stderr,"\n");
 	for (CELL addr=0;addr<Cp;addr++) {
-		if (addr % 0x10 == 0) printf("\n%.4X: ",addr);		// start addr: line
+		if (addr % 0x10 == 0) fprintf(stderr,"\n%.4X: ",addr);// start addr: line
+		else if (addr % 0x08 == 0) fprintf(stderr," - ");
 		fprintf(stderr,"%.2X ",M[addr]);					// every byte
 	}
 	fprintf(stderr,"\n");

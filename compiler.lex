@@ -22,6 +22,9 @@ db					{ return DB; }
 dw					{ return DW; }
 dd					{ return DD; }
 
+begin				{ return cBEGIN; }
+again				{ return cAGAIN; }
+
 \:					{ return COLON; }
 [a-zA-Z0-9_]+		{ yylval.s = new std::string(yytext); return SYM; }
 

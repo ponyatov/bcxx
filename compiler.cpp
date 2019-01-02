@@ -31,3 +31,8 @@ void Ldefine(std::string *name) {
 		for (auto it = fw->second.begin(); it != fw->second.end(); it++ )
 			Wstore(*it,Cp);							// patch all fwd refs
 }
+
+std::stack<WORD> Cstack;
+
+void Cpush(WORD ptr) { Cstack.push(ptr); }
+WORD Cpop(void)		 { WORD t = Cstack.top(); Cstack.pop(); return t; }
